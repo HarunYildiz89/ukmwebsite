@@ -1,50 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UKM - Ulucak Kalıp Makina</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        header { background-color: #003366; color: white; padding: 20px 0; text-align: center; }
-        section { padding: 40px 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 10px; }
-        h1 { font-size: 2.5em; }
-        ul { padding-left: 20px; }
-        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UKM | Ulucak Kalıp Makina</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, section, footer { padding: 20px; }
+    header { background-color: #222; color: white; text-align: center; position: relative; }
+    h1, h2 { color: #2e2e2e; }
+    .gallery img { width: 300px; margin: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+    ul { line-height: 1.8; }
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .lang-switch button {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    .lang-switch button.active {
+      background: #008CBA;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>UKM</h1>
-        <p>Ulucak Kalıp Makina | Kalıp Devreye Alma ve Proje Takibi</p>
-    </header>
-    <section>
-        <h2>Hakkımızda</h2>
-        <p>2014 yılında kurulan UKM (Ulucak Kalıp Makina), otomotiv kalıp sektöründe uzmanlaşmış bir teknik danışmanlık firmasıdır. 1993’ten bugüne gelen tecrübemizle OEM ve Tier-1 tedarikçilere özel çözümler sunuyoruz.</p>
-        
-        <h2>Hizmetlerimiz</h2>
-        <ul>
-            <li>Home-line Try-Out & Devreye Alma</li>
-            <li>Görsel ve ölçüsel hata analizi</li>
-            <li>Buy-off öncesi ve sonrası teknik destek</li>
-            <li>Proje takibi ve teknik raporlama</li>
-            <li>Müşteri değişikliklerinin uygulanması</li>
-        </ul>
 
-        <h2>Referanslar</h2>
-        <p>Tofaş, Renault, Ford, Beyçelik, Coşkunöz, TKG, Ermetal ve diğer Tier-1 tedarikçileri.</p>
+  <header>
+    <h1><strong>UKM</strong> - Ulucak Kalıp Makina</h1>
+    <p class="tr">Kalıpların devreye alınmasında uzman çözüm ortağınız</p>
+    <p class="en" style="display:none;">Your expert partner in mold commissioning</p>
 
-        <h2>Ekibimiz</h2>
-        <p>23 kişilik uzman kadromuzla, gerekirse konusunda deneyimli profesyonellerle esnek şekilde destek veriyoruz.</p>
+    <div class="lang-switch">
+      <button id="btn-tr" class="active">TR</button>
+      <button id="btn-en">EN</button>
+    </div>
+  </header>
 
-        <h2>İletişim</h2>
-        <p>📍 Bursa<br>
-           📞 +90 537 450 02 26<br>
-           📧 hulucak@ukmkalip.com.tr</p>
-    </section>
-    <footer>
-        &copy; 2025 UKM - Ulucak Kalıp Makina
-    </footer>
+  <section>
+    <h2 class="tr">Hizmetlerimiz</h2>
+    <h2 class="en" style="display:none;">Our Services</h2>
+
+    <ul class="tr">
+      <li>Kalıplarda try-out çalışmaları</li>
+      <li>Home-line try-out (kalıpların üretim hattında devreye alınması)</li>
+      <li>Ölçüsel ve görsel hata analizi ile çözümleri</li>
+      <li>Buy-off öncesi ve sonrası teknik destek</li>
+      <li>Proje takibi ve teknik raporlama</li>
+      <li>Proje yönetimi ve müşteri koordinasyonu</li>
+      <li>Parça ya da kalıp üzerinde müşteri değişikliklerinin uygulanması</li>
+    </ul>
+
+    <ul class="en" style="display:none;">
+      <li>Try-out operations on molds</li>
+      <li>Home-line try-out (commissioning molds on production line)</li>
+      <li>Dimensional and visual defect analysis and solutions</li>
+      <li>Technical support before and after buy-off</li>
+      <li>Project tracking and technical reporting</li>
+      <li>Project management and customer coordination</li>
+      <li>Implementation of customer changes on parts or molds</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="tr">Galeri</h2>
+    <h2 class="en" style="display:none;">Gallery</h2>
+    <div class="gallery">
+      <img src="https://img.freepik.com/free-photo/modern-industrial-factory-production-line_1268-16663.jpg" alt="Kalıp Atölyesi">
+      <img src="https://img.freepik.com/free-photo/metalworking-automated-machine-line_1268-16701.jpg" alt="Üretim Hattı">
+      <img src="https://img.freepik.com/free-photo/team-industrial-engineers-working-factory_1170-1877.jpg" alt="Ekip Çalışması">
+      <img src="https://img.freepik.com/free-photo/workshop-metal-cutting-machines_1268-16687.jpg" alt="Atölye Araçları">
+      <img src="https://img.freepik.com/free-vector/project-report-concept-illustration_114360-4276.jpg" alt="Teknik Raporlama">
+    </div>
+  </section>
+
+  <footer>
+    <p class="tr">İletişim: hulucak@ukmkalip.com.tr | Tel: +90 537 450 02 26</p>
+    <p class="en" style="display:none;">Contact: hulucak@ukmkalip.com.tr | Tel: +90 537 450 02 26</p>
+    <p>&copy; 2025 UKM Kalıp Makina</p>
+  </footer>
+
+  <script>
+    const btnTr = document.getElementById('btn-tr');
+    const btnEn = document.getElementById('btn-en');
+
+    btnTr.onclick = () => {
+      document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.tr').forEach(el => el.style.display = '');
+      btnTr.classList.add('active');
+      btnEn.classList.remove('active');
+      document.documentElement.lang = 'tr';
+    };
+
+    btnEn.onclick = () => {
+      document.querySelectorAll('.tr').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.en').forEach(el => el.style.display = '');
+      btnEn.classList.add('active');
+      btnTr.classList.remove('active');
+      document.documentElement.lang = 'en';
+    };
+  </script>
+
 </body>
 </html>
